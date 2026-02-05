@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Home, Briefcase, Trophy, Code2, FolderOpen, User } from "lucide-react";
 
 const navItems = [
-    { icon: Home, label: "Home", href: "/" },
+    { icon: Home, label: "Home", href: "#home" },
     { icon: Briefcase, label: "Experience", href: "#experience" },
     { icon: Trophy, label: "Achievements", href: "#achievements" },
     { icon: Code2, label: "Skills", href: "#skills" },

@@ -74,7 +74,7 @@ export default function CodingProfiles() {
     const gridBlocks = Array.from({ length: 120 }, (_, i) => i);
 
     return (
-        <section className="py-20 relative overflow-hidden bg-[#0a0a12]">
+        <section id="achievements" className="py-20 relative overflow-hidden bg-[#0a0a12]">
             {/* Metallic Texture Background */}
             <div className="absolute inset-0 opacity-30">
                 {/* Base metallic gradient */}

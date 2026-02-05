@@ -54,7 +54,7 @@ const tools: Skill[] = [
 
 export default function Skills() {
     return (
-        <section className="py-20 relative overflow-hidden">
+        <section id="skills" className="py-20 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
 
                 {/* Languages Section */}

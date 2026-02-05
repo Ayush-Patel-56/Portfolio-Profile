@@ -287,7 +287,7 @@ const freelanceProjects: LargeProject[] = [
 
 export default function Projects() {
     return (
-        <section className="py-20 relative">
+        <section id="projects" className="py-20 relative">
             <div className="container mx-auto px-6 max-w-6xl">
 
                 <div className="flex flex-col items-center mb-16 space-y-4">

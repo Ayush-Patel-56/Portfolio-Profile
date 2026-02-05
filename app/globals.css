@@ -35,6 +35,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   color-scheme: dark;
 }

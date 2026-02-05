@@ -36,7 +36,7 @@ export default function Hero() {
         fetchVisitorCount();
     }, []);
     return (
-        <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
             {/* Background Elements */}
             <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none" />
             <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
