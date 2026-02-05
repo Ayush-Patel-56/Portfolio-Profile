@@ -4,7 +4,7 @@ import { motion, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import CodeCard from "./CodeCard";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function AnimatedCounter({ value }: { value: number }) {
     const spring = useSpring(0, { bounce: 0, duration: 2000 });
@@ -18,6 +18,23 @@ function AnimatedCounter({ value }: { value: number }) {
 }
 
 export default function Hero() {
+    const [visitorCount, setVisitorCount] = useState<number>(0);
+
+    useEffect(() => {
+        async function fetchVisitorCount() {
+            try {
+                // Increment counter on each page load
+                const response = await fetch('https://api.countapi.xyz/hit/ayush-patel-portfolio-hero/visits');
+                const data = await response.json();
+                setVisitorCount(data.value || 0);
+            } catch (error) {
+                console.error('Error fetching visitor count:', error);
+                setVisitorCount(0);
+            }
+        }
+
+        fetchVisitorCount();
+    }, []);
     return (
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
             {/* Background Elements */}
@@ -82,7 +99,7 @@ export default function Hero() {
             >
                 <span className="text-white/50">Total Visits</span>
                 <span className="ml-2 font-bold text-white">
-                    <AnimatedCounter value={1949} />
+                    <AnimatedCounter value={visitorCount} />
                 </span>
                 <div className="absolute -bottom-px left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
             </motion.div>
