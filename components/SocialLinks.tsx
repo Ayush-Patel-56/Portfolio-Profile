@@ -2,11 +2,11 @@ import Link from "next/link";
 import { Github, Linkedin, Instagram, Twitter, Mail } from "lucide-react";
 
 const socialLinks = [
-    { icon: Github, label: "GitHub", href: "https://github.com", color: "hover:text-white hover:bg-white/10 hover:border-white/50" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com", color: "hover:text-blue-400 hover:bg-blue-400/10 hover:border-blue-400/50" },
-    { icon: Instagram, label: "Instagram", href: "https://instagram.com", color: "hover:text-pink-500 hover:bg-pink-500/10 hover:border-pink-500/50" },
-    { icon: Twitter, label: "Twitter", href: "https://twitter.com", color: "hover:text-sky-500 hover:bg-sky-500/10 hover:border-sky-500/50" },
-    { icon: Mail, label: "Email", href: "mailto:rohansen856@gmail.com", color: "hover:text-red-500 hover:bg-red-500/10 hover:border-red-500/50" },
+    { icon: Github, label: "GitHub", href: "https://github.com/Ayush-Patel-56", color: "text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/50" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/ayush-patel-56/", color: "text-blue-400 hover:bg-blue-400/10 hover:border-blue-400/50" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/ayush.patel.56/", color: "text-pink-500 hover:bg-pink-500/10 hover:border-pink-500/50" },
+    { icon: Twitter, label: "Twitter", href: "https://twitter.com/AyushPatel56", color: "text-sky-500 hover:bg-sky-500/10 hover:border-sky-500/50" },
+    { icon: Mail, label: "Email", href: "mailto:ayushpatel2731@gmail.com", color: "text-red-500 hover:bg-red-500/10 hover:border-red-500/50" },
 ];
 
 export default function SocialLinks() {
