@@ -8,6 +8,7 @@ import GitHubStats from "@/components/GitHubStats";
 import Sidebar from "@/components/Sidebar";
 import SocialLinks from "@/components/SocialLinks";
 import BackgroundEffects from "@/components/BackgroundEffects";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -24,12 +25,9 @@ export default function Home() {
         <Projects />
         <CodingProfiles />
         <GitHubStats />
-
-        {/* Spacer for scroll */}
-        <div className="h-screen flex items-center justify-center text-white/10">
-          Scroll for more... (Placeholder)
-        </div>
       </div>
+
+      <Footer />
 
       {/* Background radial gradient spotlight following mouse could be added here */}
     </main>
