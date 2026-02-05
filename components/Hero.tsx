@@ -28,7 +28,8 @@ export default function Hero() {
                 const data = await response.json();
                 setVisitorCount(data.value || 0);
             } catch (error) {
-                console.error('Error fetching visitor count:', error);
+                // Silently fail if blocked by ad-blocker or network error
+                console.warn('Visitor counter blocked/failed (likely ad-blocker). Defaulting to 0.');
                 setVisitorCount(0);
             }
         }

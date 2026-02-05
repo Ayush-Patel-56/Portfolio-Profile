@@ -35,8 +35,8 @@ export default function About() {
                                             <p className="text-[10px] text-white/50 uppercase tracking-widest mt-1">by AI</p>
                                         </div>
                                         <div className="flex gap-2">
-                                            <span className="px-2 py-0.5 rounded-full bg-white/10 text-[10px] text-white/80 border border-white/10 shadow-inner">serious</span>
-                                            <span className="px-2 py-0.5 rounded-full bg-white/10 text-[10px] text-white/80 border border-white/10 shadow-inner">enthusiastic</span>
+                                            <span className="px-2 py-0.5 rounded-full bg-white/10 text-[10px] text-white/80 border border-white/10 shadow-inner">focused</span>
+                                            <span className="px-2 py-0.5 rounded-full bg-white/10 text-[10px] text-white/80 border border-white/10 shadow-inner">evolving</span>
                                         </div>
                                         <button className="flex items-center gap-2 text-[10px] text-white/60 hover:text-white transition-colors group/btn">
                                             <div className="p-1 rounded-full border border-white/30 group-hover/btn:border-white group-hover/btn:bg-white/10 transition-colors">
@@ -79,10 +79,10 @@ export default function About() {
 
                             <div className="space-y-6 text-gray-300 text-lg leading-relaxed font-light">
                                 <p>
-                                    I'm a software developer skilled at <span className="text-blue-500 font-bold">DevOPS and Blockchain</span> specialising in Back-End Development and Software Architecture. I enjoy discussing topics relating to <span className="text-blue-500 font-bold">System Design, Open Source, Microservices and Cloud Architecture.</span>
+                                    I'm a <span className="text-blue-500 font-bold">Full-Stack & Android Developer</span> and <span className="text-blue-500 font-bold">Competitive Programmer</span>. I'm also an active <span className="text-blue-500 font-bold">Open Source Contributor</span> who believes in keeping things simple, focused, and constantly evolving.
                                 </p>
                                 <p>
-                                    Hit me up anytime you want to chat about <span className="text-blue-500 font-bold">System Architecture, Blockchain, Cloud, Rust, Go-Lang, Open Source</span> or anything you have in mind. Let's work together and create something great !!
+                                    Hit me up anytime you want to chat about <span className="text-blue-500 font-bold">Web Development, Android, DSA, Open Source</span> or anything you have in mind. Let's work together and create something great !!
                                 </p>
                             </div>
 
@@ -94,7 +94,7 @@ export default function About() {
 
                     </div>
                 </motion.div>
-            </div>
-        </section>
+            </div >
+        </section >
     );
 }
