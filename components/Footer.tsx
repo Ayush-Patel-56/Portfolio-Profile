@@ -58,7 +58,7 @@ export default function Footer() {
                     >
                         <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-white/20 grayscale hover:grayscale-0 transition-all duration-500">
                             <Image
-                                src="/profile.png"
+                                src="/Bear logo.png"
                                 alt="Ayush Patel"
                                 width={128}
                                 height={128}
