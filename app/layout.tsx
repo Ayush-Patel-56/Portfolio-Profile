@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Fira_Code } from "next/font/google"; // eslint-disable-line @typescript-eslint/no-unused-vars
 import "./globals.css";
+import InteractiveBackground from "@/components/InteractiveBackground";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${firaCode.variable} antialiased bg-background text-foreground`}
       >
+        <InteractiveBackground />
         {children}
       </body>
     </html>

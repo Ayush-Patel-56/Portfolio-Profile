@@ -17,7 +17,7 @@ export default function Home() {
       <Sidebar />
       <SocialLinks />
 
-      <div className="pl-20 pr-20"> {/* Add padding to account for fixed sidebars */}
+      <div className="pl-20 pr-20 relative z-20"> {/* Add padding to account for fixed sidebars */}
         <Hero />
         <About />
         <Skills />
