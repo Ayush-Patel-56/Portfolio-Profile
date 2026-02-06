@@ -74,6 +74,19 @@ export default function Hero() {
                                     className="object-cover"
                                     priority
                                 />
+
+
+                                {/* Signature Overlay */}
+                                <div className="absolute bottom-6 left-6 z-10">
+                                    <Image
+                                        src="/signature.png"
+                                        alt="Ayush Signature"
+                                        width={500}
+                                        height={350}
+                                        className="opacity-90 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]"
+                                        style={{ filter: 'brightness(0) invert(1)' }}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </motion.div>
