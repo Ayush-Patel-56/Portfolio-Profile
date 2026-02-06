@@ -131,76 +131,60 @@ interface LargeProject {
 
 const largeProjects: LargeProject[] = [
     {
-        title: "Campusorbit",
-        description: "A comprehensive campus management platform for IIT, IIIT, and NIT students with schedule management, attendance tracking, club activities, and community features.",
-        github: "#",
-        live: "#",
-        tags: ["backend", "framer-motion", "nextjs", "rust", "flutter", "API", "Auth0", "PostgreSQL"],
+        title: "GroupWallet",
+        description: "A collaborative expense management platform for groups, enabling shared wallets, expense tracking, and automated bill splitting with real-time synchronization.",
+        github: "https://github.com/Ayush-Patel-56/GroupWallet",
+        tags: ["fintech", "react", "nodejs", "mongodb", "real-time", "expense-tracking", "collaborative"],
         visual: (
             <div className="w-full h-full bg-[#050510] relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(100,50,255,0.1),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,197,94,0.1),transparent_50%)]" />
                 <div className="text-center z-10 p-8">
-                    <div className="w-20 h-20 mx-auto bg-gradient-to-tr from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-purple-500/20">
-                        <Smartphone className="text-white w-10 h-10" />
+                    <div className="w-20 h-20 mx-auto bg-gradient-to-tr from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-green-500/20">
+                        <Layers className="text-white w-10 h-10" />
                     </div>
-                    <h4 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">CampusOrbit</h4>
-                    <p className="text-white/40 mt-2 text-sm">An app made for the ease of students</p>
+                    <h4 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-emerald-400">GroupWallet</h4>
+                    <p className="text-white/40 mt-2 text-sm">Split expenses, share wallets</p>
                 </div>
                 {/* Floating elements */}
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl" />
-                <div className="absolute top-10 left-10 w-2 h-2 bg-blue-500 rounded-full" />
-                <div className="absolute bottom-20 right-20 w-3 h-3 bg-purple-500 rounded-full" />
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-green-500/10 rounded-full blur-3xl" />
+                <div className="absolute top-10 left-10 w-2 h-2 bg-green-500 rounded-full" />
+                <div className="absolute bottom-20 right-20 w-3 h-3 bg-emerald-500 rounded-full" />
             </div>
         )
     },
     {
-        title: "Medico24",
-        description: "A comprehensive health companion mobile application designed to provide seamless healthcare services and accessibility features for all users with AI-powered diagnostics.",
-        github: "#",
-        tags: ["healthcare", "flutter", "python", "fastapi", "ML", "nextjs", "mobile", "observability"],
+        title: "MergeShip",
+        description: "A powerful Git workflow automation tool that streamlines code review processes, automates merge operations, and enhances team collaboration with intelligent conflict resolution.",
+        github: "https://github.com/Ayush-Patel-56/mergeship",
+        live: "https://mergeship.vercel.app/",
+        tags: ["devtools", "git", "automation", "typescript", "workflow", "CI/CD", "collaboration"],
         visual: (
-            <div className="w-full h-full bg-[#0f0f15] relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50" />
-                <div className="grid grid-cols-2 gap-4 w-3/4 opacity-30 transform -skew-x-12">
-                    <div className="bg-white/5 h-20 rounded-lg" />
-                    <div className="bg-white/5 h-20 rounded-lg" />
-                    <div className="bg-white/5 h-32 rounded-lg col-span-2" />
-                </div>
-                <div className="absolute z-10 bg-[#12121e] border border-white/10 p-4 rounded-xl flex items-center gap-4 shadow-2xl">
-                    <div className="bg-red-500/20 p-2 rounded-lg">
-                        <Activity className="text-red-500 w-8 h-8" />
-                    </div>
-                    <div>
-                        <div className="text-white font-bold">Medico24</div>
-                        <div className="text-xs text-white/50">Project Summary</div>
-                    </div>
-                </div>
+            <div className="w-full h-full relative overflow-hidden bg-[#0a0a0a]">
+                <Image
+                    src="/mergeship.png"
+                    alt="MergeShip"
+                    fill
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             </div>
         )
     },
     {
-        title: "Veil",
-        description: "A decentralized medical application built on blockchain technology, enabling secure and transparent medical record management with patient privacy at its core.",
-        github: "#",
-        tags: ["blockchain", "web3", "typescript", "medical", "decentralized", "ethereum"],
+        title: "User Auth System",
+        description: "A comprehensive authentication and authorization system with JWT tokens, OAuth integration, role-based access control, and secure session management for modern web applications.",
+        github: "https://github.com/Ayush-Patel-56/User-Auth",
+        live: "https://8byte-beryl.vercel.app/",
+        tags: ["authentication", "security", "JWT", "OAuth", "RBAC", "nodejs", "express", "backend"],
         visual: (
-            <div className="w-full h-full bg-[#030303] relative flex items-center justify-center p-8">
-                <div className="relative w-full h-full border border-white/5 rounded-xl bg-[#080808] p-4 flex flex-col justify-between overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full blur-3xl" />
-                    <div className="flex items-center gap-2 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-green-500" />
-                        <span className="text-xs text-white/30 font-mono">Patient Profile</span>
-                    </div>
-                    <div className="flex items-center justify-center flex-grow">
-                        <div className="w-24 h-24 rounded-full border-2 border-dashed border-white/10 flex items-center justify-center relative">
-                            <div className="absolute inset-0 border-t-2 border-green-500/50 rounded-full animate-spin duration-3000" />
-                            <Layers className="text-white/20 w-8 h-8" />
-                        </div>
-                    </div>
-                    <div className="text-xs font-mono text-green-500/50 mt-4">
-                        0x71C...92F
-                    </div>
-                </div>
+            <div className="w-full h-full relative overflow-hidden bg-[#0a0a0a]">
+                <Image
+                    src="/user_auth.png"
+                    alt="User Auth System"
+                    fill
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             </div>
         )
     }
