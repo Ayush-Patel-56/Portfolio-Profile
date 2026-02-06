@@ -39,7 +39,18 @@ export default function Hero() {
     return (
         <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
             {/* Background Elements */}
-            <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none" />
+            {/* Fine Grid Pattern - Only top half with fade */}
+            <div className="absolute top-0 left-0 right-0 h-1/2 pointer-events-none" style={{
+                backgroundImage: `
+                    linear-gradient(to right, rgba(20, 184, 166, 0.08) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(20, 184, 166, 0.08) 1px, transparent 1px)
+                `,
+                backgroundSize: '20px 20px',
+                maskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)'
+            }} />
+
+            {/* Original gradient blurs */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-1/2 h-full bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
 
