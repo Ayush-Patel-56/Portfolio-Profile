@@ -62,11 +62,21 @@ export default function Hero() {
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
+                        whileHover={{
+                            scale: 1.03,
+                            rotateY: 5,
+                            rotateX: 2,
+                            transition: { duration: 0.4, type: "spring", stiffness: 200 }
+                        }}
+                        style={{ transformStyle: "preserve-3d", perspective: 1000 }}
                         className="relative lg:w-1/2 flex justify-center"
                     >
-                        <div className="relative w-80 h-80 lg:w-[500px] lg:h-[600px] grayscale hover:grayscale-0 transition-all duration-500">
+                        <div className="relative w-80 h-80 lg:w-[500px] lg:h-[600px] grayscale hover:grayscale-0 transition-all duration-500 group">
+                            {/* Intense Glow on Hover */}
+                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 blur-2xl group-hover:blur-3xl transition-all duration-500 -z-10" />
+
                             {/* Image Container */}
-                            <div className="w-full h-full rounded-2xl border border-white/10 overflow-hidden relative bg-black">
+                            <div className="w-full h-full rounded-2xl border border-white/10 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_60px_rgba(20,184,166,0.4)] overflow-hidden relative bg-black transition-all duration-500">
                                 <Image
                                     src="/profile.png"
                                     alt="Ayush Patel"

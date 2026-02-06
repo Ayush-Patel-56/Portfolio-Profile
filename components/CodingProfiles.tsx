@@ -69,6 +69,7 @@ const profiles: Profile[] = [
 
 export default function CodingProfiles() {
     const [hoveredBlock, setHoveredBlock] = useState<number | null>(null);
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     // Create grid blocks
     const gridBlocks = Array.from({ length: 120 }, (_, i) => i);
@@ -218,15 +219,21 @@ export default function CodingProfiles() {
                                 type: "spring",
                                 stiffness: 150
                             }}
-                            whileHover={{ y: -10, scale: 1.05 }}
+                            whileHover={{
+                                y: -15,
+                                scale: 1.15,
+                                rotateZ: 10,
+                                transition: { duration: 0.3, type: "spring", stiffness: 200 }
+                            }}
+                            style={{ transformStyle: "preserve-3d" }}
                             className="group relative flex flex-col items-center"
                         >
                             <div className="relative w-24 h-24 md:w-32 md:h-32 mb-4">
                                 {/* Glow Effect */}
-                                <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${profile.color} blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100`} />
+                                <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${profile.color} blur-2xl group-hover:blur-3xl transition-all duration-300 opacity-0 group-hover:opacity-80`} />
 
                                 {/* Circle Container */}
-                                <div className={`relative w-full h-full rounded-full border border-white/10 group-hover:border-white/30 ${profile.bg} group-hover:bg-opacity-90 flex items-center justify-center ${['LeetCode', 'CodeChef', 'Codolio'].includes(profile.name) ? 'p-1' : 'p-6'} shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300 overflow-hidden`}>
+                                <div className={`relative w-full h-full rounded-full border border-white/10 group-hover:border-white/50 ${profile.bg} group-hover:bg-opacity-90 flex items-center justify-center ${['LeetCode', 'CodeChef', 'Codolio'].includes(profile.name) ? 'p-1' : 'p-6'} shadow-xl group-hover:shadow-[0_0_50px_rgba(255,255,255,0.3)] group-hover:scale-110 transition-all duration-300 overflow-hidden`}>
 
                                     {/* Icon */}
                                     <div className={`relative w-full h-full ${['LeetCode', 'CodeChef', 'Codolio'].includes(profile.name) ? '' : 'p-2'}`}>

@@ -94,9 +94,16 @@ export default function Skills() {
                                     type: "spring",
                                     stiffness: 100
                                 }}
+                                whileHover={{
+                                    scale: 1.15,
+                                    rotateY: 180,
+                                    rotateZ: 5,
+                                    transition: { duration: 0.4, type: "spring", stiffness: 200 }
+                                }}
+                                style={{ transformStyle: "preserve-3d" }}
                                 className="group flex flex-col items-center gap-3"
                             >
-                                <div className="w-20 h-20 bg-[#1e1e1e] border border-white/5 rounded-2xl flex items-center justify-center shadow-lg group-hover:border-blue-500/50 group-hover:shadow-blue-500/20 group-hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                                <div className="w-20 h-20 bg-[#1e1e1e] border border-white/5 rounded-2xl flex items-center justify-center shadow-lg group-hover:border-blue-500 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] group-hover:-translate-y-2 group-hover:scale-110 transition-all duration-300 relative overflow-hidden">
                                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                     <div className="relative w-10 h-10">
                                         <Image

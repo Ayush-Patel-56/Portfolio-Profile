@@ -324,8 +324,18 @@ export default function Projects() {
                                 type: "spring",
                                 stiffness: 100
                             }}
-                            whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                            className={`group relative flex flex-col bg-[#121212] border border-white/5 rounded-2xl overflow-hidden hover:border-white/10 transition-colors ${project.colSpan || ''}`}
+                            whileHover={{
+                                y: -15,
+                                scale: 1.02,
+                                rotateX: 5,
+                                rotateY: 5,
+                                transition: { duration: 0.3, type: "spring", stiffness: 300 }
+                            }}
+                            style={{
+                                transformStyle: "preserve-3d",
+                                perspective: 1000
+                            }}
+                            className={`group relative flex flex-col bg-[#121212] border border-white/5 rounded-2xl overflow-hidden hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(20,184,166,0.3)] transition-all duration-300 ${project.colSpan || ''}`}
                         >
                             {/* Visual Area */}
                             <div className="h-48 w-full border-b border-white/5 overflow-hidden">

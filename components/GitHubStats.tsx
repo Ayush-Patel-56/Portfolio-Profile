@@ -132,14 +132,21 @@ export default function GitHubStats() {
                                 type: "spring",
                                 stiffness: 120
                             }}
-                            whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                            whileHover={{
+                                y: -12,
+                                scale: 1.05,
+                                rotateX: 5,
+                                rotateY: 5,
+                                transition: { duration: 0.3, type: "spring", stiffness: 250 }
+                            }}
+                            style={{ transformStyle: "preserve-3d", perspective: 1000 }}
                             className="relative group"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/[0.02] rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
-                            <div className="relative bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/[0.02] rounded-2xl blur-xl group-hover:blur-3xl transition-all duration-300 group-hover:opacity-150" />
+                            <div className="relative bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(20,184,166,0.3)] transition-all duration-300">
                                 <motion.div
                                     className={`${stat.bgColor} w-12 h-12 rounded-xl flex items-center justify-center mb-4`}
-                                    whileHover={{ rotate: 360, scale: 1.1 }}
+                                    whileHover={{ rotate: 360, scale: 1.2 }}
                                     transition={{ duration: 0.5 }}
                                 >
                                     <stat.icon className={`w-6 h-6 ${stat.color}`} />
