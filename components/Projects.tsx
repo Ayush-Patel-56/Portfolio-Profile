@@ -17,9 +17,10 @@ interface Project {
 
 const projects: Project[] = [
     {
-        title: "Bitcoin AI assisted coding tool",
-        description: "An agentic ai specializing in blockchain related tasks. Built for the Braidpool org.",
-        status: "building",
+        title: "Local AI",
+        description: "A local AI assistant powered by advanced language models, providing privacy-focused AI capabilities without cloud dependency.",
+        link: "https://github.com/Ayush-Patel-56/Local_AI",
+        linkText: "GitHub",
         visual: (
             <div className="w-full h-full bg-[#0a0a0a] p-4 flex flex-col justify-center gap-3 relative overflow-hidden">
                 {/* Abstract UI elements */}
@@ -42,9 +43,20 @@ const projects: Project[] = [
         )
     },
     {
-        title: "ELK Stack Monitoring",
-        description: "Complete monitoring solution using ELK stack for real-time log analysis and system observability.",
-        link: "#",
+        title: "Sustainable Food Tracker",
+        description: "Track your food consumption and carbon footprint with smart analytics and sustainability recommendations.",
+        link: "https://github.com/Ayush-Patel-56/Sustainable-Food-Tracker",
+        linkText: "GitHub",
+        visual: (
+            <div className="w-full h-full bg-gradient-to-br from-green-600 to-emerald-500 flex items-center justify-center">
+                <Layers className="w-16 h-16 text-white/50" />
+            </div>
+        )
+    },
+    {
+        title: "Student Attendance System",
+        description: "Automated attendance tracking system for educational institutions with real-time monitoring and analytics.",
+        link: "https://github.com/Ayush-Patel-56/student-attendance-system",
         linkText: "GitHub",
         visual: (
             <div className="w-full h-full bg-[#0a0a0a] p-6 flex flex-col gap-3 relative">
@@ -60,63 +72,46 @@ const projects: Project[] = [
         )
     },
     {
-        title: "Medico24",
-        description: "Healthcare management platform providing 24/7 medical services and patient care solutions.",
-        link: "#",
+        title: "Soniq Music Player",
+        description: "A modern, feature-rich music player with advanced audio controls, playlist management, and beautiful UI design.",
+        link: "https://github.com/Ayush-Patel-56/soniq-music-player",
         linkText: "GitHub",
-        visual: (
-            <div className="w-full h-full bg-gradient-to-br from-pink-500 to-rose-400 flex items-center justify-center">
-                <Activity className="w-16 h-16 text-white/50" />
-            </div>
-        )
-    },
-    {
-        title: "Campusorbit",
-        description: "A comprehensive campus management platform for IIT, IIIT, and NIT students with schedule management, attendance tracking, club activities, and community features.",
-        link: "#",
-        linkText: "Visit Live Site",
         colSpan: "md:col-span-2",
         visual: (
-            <div className="w-full h-full bg-[#0a0a0a] relative flex items-center justify-center overflow-hidden">
-                <div className="flex gap-4 transform rotate-6 scale-90 opacity-80">
-                    <div className="w-24 h-32 rounded-xl bg-black border border-white/10 p-2 flex flex-col items-center justify-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs">Fig</div>
-                        <div className="text-[8px] text-white/40 text-center">Made in flutter with designs from figma</div>
-                        <div className="text-[8px] border border-red-500/30 text-red-400 px-1 rounded">Android App</div>
+            <div className="w-full h-full bg-gradient-to-br from-purple-600 via-pink-500 to-rose-500 relative flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-black/20" />
+                <div className="z-10 text-center">
+                    <div className="w-20 h-20 mx-auto bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 border border-white/20">
+                        <Activity className="text-white w-10 h-10" />
                     </div>
-                    <div className="w-24 h-32 rounded-xl bg-black border border-white/10 p-2 flex flex-col items-center justify-center gap-2 scale-110 z-10 shadow-2xl shadow-purple-500/10">
-                        <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-xs">Web</div>
-                        <div className="text-[8px] text-white/40 text-center">See for yourself @campusorbit.vercel.app</div>
-                        <div className="text-[8px] border border-green-500/30 text-green-400 px-1 rounded">Website</div>
-                    </div>
-                    <div className="w-24 h-32 rounded-xl bg-black border border-white/10 p-2 flex flex-col items-center justify-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400 text-xs">Rust</div>
-                        <div className="text-[8px] text-white/40 text-center">Ultra fast backend written in Rust</div>
-                        <div className="text-[8px] border border-orange-500/30 text-orange-400 px-1 rounded">Backend</div>
-                    </div>
+                    <div className="text-white/90 font-bold text-xl">Soniq</div>
+                    <div className="text-white/60 text-sm">Music Player</div>
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 h-1 bg-white/20 rounded-full">
+                    <div className="h-full w-1/3 bg-white/60 rounded-full" />
                 </div>
             </div>
         )
     },
     {
-        title: "RMF Metrics Simulator",
-        description: "z/OS mainframe metrics simulator that generates realistic IBM RMF Monitor III data with monitoring integration.",
-        link: "#",
+        title: "Open Source Project",
+        description: "A collection of open-source contributions and experimental projects showcasing various technologies and frameworks.",
+        link: "https://github.com/Ayush-Patel-56/Open_source_project",
         linkText: "GitHub",
         visual: (
             <div className="w-full h-full bg-[#0a0a0a] p-4 flex flex-col justify-center relative font-mono text-xs">
                 <div className="bg-white/5 rounded-lg p-3 border border-white/5">
-                    <p className="text-gray-400 mb-2">// metrics simulation</p>
+                    <p className="text-gray-400 mb-2">// open source</p>
                     <div className="flex gap-2 mb-1">
                         <span className="text-purple-400">const</span>
-                        <span className="text-blue-400">frameworks</span>
+                        <span className="text-blue-400">contribution</span>
                         <span className="text-white">=</span>
-                        <span className="text-green-400">["React", "Vue"]</span>
+                        <span className="text-green-400">"community"</span>
                     </div>
                     <div className="flex justify-end mt-2">
                         <div className="flex items-center gap-2 bg-black/50 px-2 py-1 rounded-full border border-white/10">
-                            <span className="text-white/60 text-[10px]">Use PHP.</span>
-                            <div className="w-3 h-3 rounded-full bg-purple-500" />
+                            <span className="text-white/60 text-[10px]">Open Source</span>
+                            <div className="w-3 h-3 rounded-full bg-green-500" />
                         </div>
                     </div>
                 </div>
