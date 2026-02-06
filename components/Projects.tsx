@@ -290,23 +290,41 @@ export default function Projects() {
         <section id="projects" className="py-20 relative">
             <div className="container mx-auto px-6 max-w-6xl">
 
-                <div className="flex flex-col items-center mb-16 space-y-4">
-                    <div className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+                <motion.div
+                    className="flex flex-col items-center mb-16 space-y-4"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <motion.div
+                        className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm"
+                        initial={{ scale: 0.8 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                    >
                         <span className="text-sm font-medium text-white/80">Projects</span>
-                    </div>
+                    </motion.div>
                     <h2 className="text-4xl md:text-5xl font-bold text-white text-center">
                         Flagship Projects
                     </h2>
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
+                            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{
+                                delay: index * 0.08,
+                                duration: 0.5,
+                                type: "spring",
+                                stiffness: 100
+                            }}
+                            whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             className={`group relative flex flex-col bg-[#121212] border border-white/5 rounded-2xl overflow-hidden hover:border-white/10 transition-colors ${project.colSpan || ''}`}
                         >
                             {/* Visual Area */}

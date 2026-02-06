@@ -57,17 +57,22 @@ export default function Skills() {
         <section id="skills" className="py-20 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
 
-                {/* Languages Section */}
                 <div className="mb-32 relative">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className="flex items-center gap-3 mb-10 justify-center"
                     >
-                        <div className="p-2 bg-white/10 rounded-lg backdrop-blur-sm">
+                        <motion.div
+                            className="p-2 bg-white/10 rounded-lg backdrop-blur-sm"
+                            whileInView={{ rotate: [0, 10, -10, 0] }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            viewport={{ once: true }}
+                        >
                             <Code2 className="w-6 h-6 text-blue-400" />
-                        </div>
+                        </motion.div>
                         <h2 className="text-3xl font-bold text-white">Language Skills</h2>
                     </motion.div>
 
@@ -80,10 +85,15 @@ export default function Skills() {
                         {languages.map((skill, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.05 }}
+                                initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{
+                                    delay: index * 0.03,
+                                    duration: 0.4,
+                                    type: "spring",
+                                    stiffness: 100
+                                }}
                                 className="group flex flex-col items-center gap-3"
                             >
                                 <div className="w-20 h-20 bg-[#1e1e1e] border border-white/5 rounded-2xl flex items-center justify-center shadow-lg group-hover:border-blue-500/50 group-hover:shadow-blue-500/20 group-hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">

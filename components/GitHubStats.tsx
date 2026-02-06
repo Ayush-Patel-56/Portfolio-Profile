@@ -123,17 +123,27 @@ export default function GitHubStats() {
                     {stats.map((stat, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
+                            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{
+                                delay: index * 0.08,
+                                duration: 0.5,
+                                type: "spring",
+                                stiffness: 120
+                            }}
+                            whileHover={{ y: -8, transition: { duration: 0.2 } }}
                             className="relative group"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/[0.02] rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
                             <div className="relative bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
-                                <div className={`${stat.bgColor} w-12 h-12 rounded-xl flex items-center justify-center mb-4`}>
+                                <motion.div
+                                    className={`${stat.bgColor} w-12 h-12 rounded-xl flex items-center justify-center mb-4`}
+                                    whileHover={{ rotate: 360, scale: 1.1 }}
+                                    transition={{ duration: 0.5 }}
+                                >
                                     <stat.icon className={`w-6 h-6 ${stat.color}`} />
-                                </div>
+                                </motion.div>
                                 <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                                 <div className="text-sm text-white/50">{stat.label}</div>
                             </div>
