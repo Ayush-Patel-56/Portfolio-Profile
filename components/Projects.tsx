@@ -46,10 +46,17 @@ const projects: Project[] = [
         title: "Sustainable Food Tracker",
         description: "Track your food consumption and carbon footprint with smart analytics and sustainability recommendations.",
         link: "https://github.com/Ayush-Patel-56/Sustainable-Food-Tracker",
-        linkText: "GitHub",
+        linkText: "Live Demo",
+        status: "https://6917bdee950026f7bc8f2bbc--scintillating-bubblegum-952195.netlify.app/",
         visual: (
-            <div className="w-full h-full bg-gradient-to-br from-green-600 to-emerald-500 flex items-center justify-center">
-                <Layers className="w-16 h-16 text-white/50" />
+            <div className="w-full h-full relative overflow-hidden bg-[#0a0a0a]">
+                <Image
+                    src="/sustainable_food_tracker.png"
+                    alt="Sustainable Food Tracker"
+                    fill
+                    className="object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             </div>
         )
     },
@@ -57,17 +64,17 @@ const projects: Project[] = [
         title: "Student Attendance System",
         description: "Automated attendance tracking system for educational institutions with real-time monitoring and analytics.",
         link: "https://github.com/Ayush-Patel-56/student-attendance-system",
-        linkText: "GitHub",
+        linkText: "Live Demo",
+        status: "https://student-attendance-system-uz1n.onrender.com/",
         visual: (
-            <div className="w-full h-full bg-[#0a0a0a] p-6 flex flex-col gap-3 relative">
-                {/* Skeleton Loader feel */}
-                {[...Array(5)].map((_, i) => (
-                    <div
-                        key={i}
-                        className="h-2 bg-white/10 rounded-full"
-                        style={{ width: `${Math.max(40, 100 - (i * 15))}%`, opacity: 1 - (i * 0.15) }}
-                    />
-                ))}
+            <div className="w-full h-full relative overflow-hidden bg-[#0a0a0a]">
+                <Image
+                    src="/student_attendence.png"
+                    alt="Student Attendance System"
+                    fill
+                    className="object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             </div>
         )
     },
@@ -75,7 +82,8 @@ const projects: Project[] = [
         title: "Soniq Music Player",
         description: "A modern, feature-rich music player with advanced audio controls, playlist management, and beautiful UI design.",
         link: "https://github.com/Ayush-Patel-56/soniq-music-player",
-        linkText: "GitHub",
+        linkText: "Live Demo",
+        status: "https://6917bdee950026f7bc8f2bbc--scintillating-bubblegum-952195.netlify.app/history",
         colSpan: "md:col-span-2",
         visual: (
             <div className="w-full h-full bg-gradient-to-br from-purple-600 via-pink-500 to-rose-500 relative flex items-center justify-center overflow-hidden">
@@ -99,22 +107,14 @@ const projects: Project[] = [
         link: "https://github.com/Ayush-Patel-56/Open_source_project",
         linkText: "GitHub",
         visual: (
-            <div className="w-full h-full bg-[#0a0a0a] p-4 flex flex-col justify-center relative font-mono text-xs">
-                <div className="bg-white/5 rounded-lg p-3 border border-white/5">
-                    <p className="text-gray-400 mb-2">// open source</p>
-                    <div className="flex gap-2 mb-1">
-                        <span className="text-purple-400">const</span>
-                        <span className="text-blue-400">contribution</span>
-                        <span className="text-white">=</span>
-                        <span className="text-green-400">"community"</span>
-                    </div>
-                    <div className="flex justify-end mt-2">
-                        <div className="flex items-center gap-2 bg-black/50 px-2 py-1 rounded-full border border-white/10">
-                            <span className="text-white/60 text-[10px]">Open Source</span>
-                            <div className="w-3 h-3 rounded-full bg-green-500" />
-                        </div>
-                    </div>
-                </div>
+            <div className="w-full h-full relative overflow-hidden bg-[#0a0a0a]">
+                <Image
+                    src="/open_source_project.png"
+                    alt="Open Source Project"
+                    fill
+                    className="object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             </div>
         )
     }
@@ -192,72 +192,60 @@ const largeProjects: LargeProject[] = [
 
 const freelanceProjects: LargeProject[] = [
     {
-        title: "Portfolio Website",
-        description: "My portfolio website made using NextJS with the primary focus on UI, readability and User Experience",
-        github: "#",
-        live: "#",
-        tags: ["personal", "portfolio", "framer-motion", "nextjs", "UI", "UX"],
+        title: "Dr. Parth Portfolio",
+        description: "A professional portfolio website for Dr. Parth Sorathiya, featuring modern design, smooth animations, and comprehensive information about medical services and expertise.",
+        github: "https://github.com/Ayush-Patel-56/dr-parth-portfolio-website",
+        live: "https://www.parthsorathiya.com/",
+        tags: ["freelance", "portfolio", "nextjs", "framer-motion", "UI", "UX", "healthcare"],
+        visual: (
+            <div className="w-full h-full relative overflow-hidden bg-[#0a0a0a]">
+                <Image
+                    src="/dr_parth.png"
+                    alt="Dr. Parth Portfolio"
+                    fill
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            </div>
+        )
+    },
+    {
+        title: "Personal Portfolio V1",
+        description: "My first portfolio website showcasing projects, skills, and experience with a focus on clean design, smooth animations, and optimal user experience.",
+        github: "https://github.com/Ayush-Patel-56/Portfolio",
+        live: "https://ayush05.netlify.app/",
+        tags: ["personal", "portfolio", "react", "framer-motion", "UI", "UX", "responsive"],
+        visual: (
+            <div className="w-full h-full relative overflow-hidden bg-[#0a0a0a]">
+                <Image
+                    src="/portfolio_website.png"
+                    alt="Personal Portfolio"
+                    fill
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            </div>
+        )
+    },
+    {
+        title: "Portfolio Profile (Current)",
+        description: "The current portfolio website you're viewing right now! Built with Next.js 15, featuring metallic textures, 3D effects, animated gradients, and a comprehensive showcase of my work.",
+        github: "https://github.com/Ayush-Patel-56/Portfolio-Profile",
+        tags: ["personal", "portfolio", "nextjs", "framer-motion", "3D", "animations", "modern"],
         visual: (
             <div className="w-full h-full bg-[#0a0a0a] relative flex items-center justify-center overflow-hidden border-r border-white/5">
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px]" />
                 <div className="z-10 text-center">
                     <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] text-white/50 mb-2">
-                        Hi, I am Rohan Sen
+                        Hi, I am Ayush Patel
                     </div>
-                    <div className="w-20 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto" />
+                    <div className="w-20 h-2 bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 rounded-full mx-auto" />
                 </div>
                 {/* Decorative code lines */}
                 <div className="absolute top-4 left-4 space-y-1 opacity-20 hidden md:block">
                     <div className="w-12 h-1 bg-white/50 rounded-full" />
                     <div className="w-8 h-1 bg-white/30 rounded-full ml-2" />
                     <div className="w-16 h-1 bg-white/40 rounded-full" />
-                </div>
-            </div>
-        )
-    },
-    {
-        title: "Zealtech",
-        description: "A freelance project made for ZEALTECH, a media marketing website. Made using nextjs and framer motion for advanced animations.",
-        github: "#",
-        live: "#",
-        tags: ["freelance", "framer-motion", "nextjs", "UX"],
-        visual: (
-            <div className="w-full h-full bg-white relative flex flex-col items-center justify-center overflow-hidden">
-                <div className="absolute top-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500" />
-                <div className="flex flex-col items-center z-10">
-                    <div className="w-10 h-10 border-2 border-blue-500 rounded-full flex items-center justify-center mb-2">
-                        <div className="w-6 h-6 border-2 border-blue-500/30 border-t-blue-500 rounded-full animate-spin" />
-                    </div>
-                    <div className="text-black font-bold text-xl tracking-tight">ZEALTECH</div>
-                    <div className="text-black/40 text-[8px] tracking-[0.2em] uppercase mt-1">Marketing Services</div>
-                </div>
-                <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-gray-50 to-transparent" />
-            </div>
-        )
-    },
-    {
-        title: "Windows 95 GUI",
-        description: "A functional clone of the Windows 95 operating system interface purely with CSS and JS, focusing on retro UI fidelity.",
-        github: "#",
-        live: "#",
-        tags: ["GUI", "Implementation", "Legacy Clone", "nextjs", "UI", "UX"],
-        visual: (
-            <div className="w-full h-full bg-[#008080] relative flex items-center justify-center overflow-hidden font-sans">
-                <div className="w-40 bg-[#c0c0c0] shadow-[inset_1px_1px_0px_#ffffff,inset_-1px_-1px_0px_#000000] p-1">
-                    <div className="bg-[#000080] px-2 py-1 flex justify-between items-center mb-2">
-                        <span className="text-white font-bold text-[10px]">Windows 95</span>
-                        <div className="w-3 h-3 bg-[#c0c0c0] shadow-[inset_1px_1px_0px_#ffffff,inset_-1px_-1px_0px_#000000] flex items-center justify-center">
-                            <span className="text-black text-[8px] leading-none mb-0.5">x</span>
-                        </div>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 py-4 border border-black/10 border-t-white/50 border-l-white/50">
-                        <div className="grid grid-cols-2 gap-0.5 transform rotate-12">
-                            <div className="w-4 h-4 bg-[#ff3333]" />
-                            <div className="w-4 h-4 bg-[#33cc33]" />
-                            <div className="w-4 h-4 bg-[#3366ff]" />
-                            <div className="w-4 h-4 bg-[#ffff33]" />
-                        </div>
-                    </div>
                 </div>
             </div>
         )
@@ -331,9 +319,15 @@ export default function Projects() {
                                         </h3>
                                     </div>
                                     {project.status && (
-                                        <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-red-500/10 text-red-400 border border-red-500/20">
-                                            {project.status}
-                                        </span>
+                                        <Link
+                                            href={project.status}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 hover:bg-green-500/20 transition-colors text-xs font-medium"
+                                        >
+                                            <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                                            Live
+                                        </Link>
                                     )}
                                 </div>
 
@@ -344,6 +338,8 @@ export default function Projects() {
                                 {project.link && (
                                     <Link
                                         href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex items-center gap-1 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
                                     >
                                         {project.linkText}
