@@ -10,7 +10,7 @@ export default function Footer() {
     const socialLinks = [
         {
             icon: Linkedin,
-            href: "https://www.linkedin.com/in/ayush-patel-56/",
+            href: "https://www.linkedin.com/in/ayush-patel-15429b359",
             label: "LinkedIn",
             color: "hover:text-blue-500"
         },
@@ -22,13 +22,13 @@ export default function Footer() {
         },
         {
             icon: Twitter,
-            href: "https://twitter.com/AyushPatel56",
+            href: "https://x.com/AyushPatel19592",
             label: "Twitter",
             color: "hover:text-blue-400"
         },
         {
             icon: Instagram,
-            href: "https://www.instagram.com/ayush.patel.56/",
+            href: "https://www.instagram.com/_ayush.patel05/",
             label: "Instagram",
             color: "hover:text-pink-500"
         },
