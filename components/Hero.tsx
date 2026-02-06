@@ -109,7 +109,7 @@ export default function Hero() {
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
                             <h1 className="text-5xl lg:text-7xl font-bold tracking-tight">
-                                Hi, I am <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-300 text-glow">Ayush Patel</span>
+                                <span className="animated-gradient-text">Hi, I am Ayush Patel</span>
                             </h1>
 
                             <a
