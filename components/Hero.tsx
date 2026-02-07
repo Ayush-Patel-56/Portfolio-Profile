@@ -71,17 +71,17 @@ export default function Hero() {
                         style={{ transformStyle: "preserve-3d", perspective: 1000 }}
                         className="relative lg:w-1/2 flex justify-center"
                     >
-                        <div className="relative w-80 h-80 lg:w-[500px] lg:h-[600px] grayscale hover:grayscale-0 transition-all duration-500 group">
-                            {/* Intense Glow on Hover */}
-                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 blur-2xl group-hover:blur-3xl transition-all duration-500 -z-10" />
+                        <div className="relative w-80 h-96 lg:w-[500px] lg:h-[700px] grayscale hover:grayscale-0 transition-all duration-500 group -ml-8 -mt-12">
+                            {/* Organic Glow on Hover - follows subject contour */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 blur-3xl group-hover:blur-[60px] transition-all duration-500 -z-10 scale-90" />
 
-                            {/* Image Container */}
-                            <div className="w-full h-full rounded-2xl border border-white/10 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_60px_rgba(20,184,166,0.4)] overflow-hidden relative bg-black transition-all duration-500">
+                            {/* Image Container - No border, no rounded corners */}
+                            <div className="w-full h-full relative transition-all duration-500 group-hover:drop-shadow-[0_0_40px_rgba(20,184,166,0.6)]">
                                 <Image
-                                    src="/profile.png"
+                                    src="/ayush-photo.png"
                                     alt="Ayush Patel"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain"
                                     priority
                                 />
 
@@ -99,6 +99,9 @@ export default function Hero() {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Horizontal Green/Teal Line Below Photo - Not affected by hover */}
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-teal-500 to-transparent -ml-8" />
                     </motion.div>
 
                     {/* Right Side - Content */}
