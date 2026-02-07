@@ -34,30 +34,57 @@ export default function GitHubStats() {
             try {
                 const username = 'Ayush-Patel-56';
 
-                // Fetch user data and repos
-                const [userResponse, reposResponse] = await Promise.all([
-                    fetch(`https://api.github.com/users/${username}`),
-                    fetch(`https://api.github.com/users/${username}/repos?per_page=100`)
-                ]);
+                // 1. Fetch User Data & Contributions
+                try {
+                    const userResponse = await fetch(`https://api.github.com/users/${username}`);
+                    if (userResponse.ok) {
+                        const userData = await userResponse.json();
+                        setGithubStats(prev => ({
+                            ...prev,
+                            totalRepos: userData.public_repos,
+                            totalContributions: 500 // Estimated count since real data requires OAuth
+                        }));
+                    } else {
+                        // Fallback for repos count
+                        const repoSearchResponse = await fetch(`https://api.github.com/search/repositories?q=user:${username}`);
+                        if (repoSearchResponse.ok) {
+                            const repoSearchData = await repoSearchResponse.json();
+                            setGithubStats(prev => ({
+                                ...prev,
+                                totalRepos: repoSearchData.total_count,
+                                totalContributions: 500
+                            }));
+                        }
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch user data", e);
+                    // Ensure we at least show the contribution estimate if fetch fails
+                    setGithubStats(prev => ({ ...prev, totalContributions: 500 }));
+                }
 
-                const userData = await userResponse.json();
-                const reposData = await reposResponse.json();
+                try {
+                    // 2. Fetch Stars using Search API (More reliable than /repos endpoint)
+                    const starsResponse = await fetch(`https://api.github.com/search/repositories?q=user:${username}&per_page=100`);
+                    if (starsResponse.ok) {
+                        const starsData = await starsResponse.json();
+                        const stars = starsData.items.reduce((acc: number, repo: any) => acc + repo.stargazers_count, 0);
+                        setGithubStats(prev => ({ ...prev, totalStars: stars }));
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch stars", e);
+                }
 
-                // Calculate total stars
-                const totalStars = Array.isArray(reposData)
-                    ? reposData.reduce((acc: number, repo: any) => acc + repo.stargazers_count, 0)
-                    : 0;
+                try {
+                    // 3. Fetch PRs
+                    const prsResponse = await fetch(`https://api.github.com/search/issues?q=author:${username}+type:pr`);
+                    if (prsResponse.ok) {
+                        const prsData = await prsResponse.json();
+                        setGithubStats(prev => ({ ...prev, totalPRs: prsData.total_count }));
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch PRs", e);
+                }
 
-                // Fetch PRs (search API for pull requests created by user)
-                const prsResponse = await fetch(`https://api.github.com/search/issues?q=author:${username}+type:pr`);
-                const prsData = await prsResponse.json();
-
-                setGithubStats({
-                    totalStars,
-                    totalPRs: prsData.total_count || 0,
-                    totalRepos: userData.public_repos || 0,
-                    totalContributions: 500 // This requires GraphQL API with auth, keeping estimate
-                });
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching GitHub stats:', error);

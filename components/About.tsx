@@ -21,25 +21,33 @@ export default function About() {
                             {/* AI Card */}
                             <AudioProfile />
 
-                            {/* AYUSH Typography (Matches ROHAN style) */}
-                            <div className="relative select-none pointer-events-none">
-                                <h2 className="text-8xl font-black tracking-tighter flex gap-1">
-                                    <span className="bg-gradient-to-b from-orange-300 to-orange-500 bg-clip-text text-transparent">A</span>
-                                    <span className="bg-gradient-to-b from-blue-300 to-blue-600 bg-clip-text text-transparent">Y</span>
-                                    <span className="bg-gradient-to-b from-red-400 to-pink-600 bg-clip-text text-transparent">U</span>
-                                    <span className="bg-gradient-to-b from-purple-400 to-purple-600 bg-clip-text text-transparent">S</span>
-                                    <span className="bg-gradient-to-b from-teal-300 to-teal-600 bg-clip-text text-transparent">H</span>
+                            {/* AYUSH Typography with Mirror Effect */}
+                            <div className="relative select-none pointer-events-none mt-8">
+                                {/* Main Text */}
+                                <h2 className="text-8xl md:text-9xl font-black tracking-tight flex gap-2 z-10 relative">
+                                    <span className="bg-gradient-to-b from-orange-400 to-amber-600 bg-clip-text text-transparent">A</span>
+                                    <span className="bg-gradient-to-b from-blue-400 to-indigo-600 bg-clip-text text-transparent">Y</span>
+                                    <span className="bg-gradient-to-b from-pink-500 to-rose-600 bg-clip-text text-transparent">U</span>
+                                    <span className="bg-gradient-to-b from-purple-400 to-violet-600 bg-clip-text text-transparent">S</span>
+                                    <span className="bg-gradient-to-b from-teal-400 to-emerald-600 bg-clip-text text-transparent">H</span>
                                 </h2>
+
                                 {/* Reflection */}
-                                <div className="absolute top-[85%] left-0 w-full flex gap-1 transform -scale-y-100 opacity-20 blur-[1px]">
-                                    <span className="bg-gradient-to-b from-orange-300 to-orange-500 bg-clip-text text-transparent">A</span>
-                                    <span className="bg-gradient-to-b from-blue-300 to-blue-600 bg-clip-text text-transparent">Y</span>
-                                    <span className="bg-gradient-to-b from-red-400 to-pink-600 bg-clip-text text-transparent">U</span>
-                                    <span className="bg-gradient-to-b from-purple-400 to-purple-600 bg-clip-text text-transparent">S</span>
-                                    <span className="bg-gradient-to-b from-teal-300 to-teal-600 bg-clip-text text-transparent">H</span>
+                                <div
+                                    className="absolute left-0 right-0 top-[70%] md:top-[80%] flex gap-2 -z-10 opacity-50 select-none pointer-events-none"
+                                    style={{
+                                        transform: 'scaleY(-1)',
+                                        maskImage: 'linear-gradient(to bottom, transparent, black)',
+                                        WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)'
+                                    }}
+                                    aria-hidden="true"
+                                >
+                                    <span className="bg-gradient-to-b from-orange-400 to-amber-600 bg-clip-text text-transparent blur-[2px]">A</span>
+                                    <span className="bg-gradient-to-b from-blue-400 to-indigo-600 bg-clip-text text-transparent blur-[2px]">Y</span>
+                                    <span className="bg-gradient-to-b from-pink-500 to-rose-600 bg-clip-text text-transparent blur-[2px]">U</span>
+                                    <span className="bg-gradient-to-b from-purple-400 to-violet-600 bg-clip-text text-transparent blur-[2px]">S</span>
+                                    <span className="bg-gradient-to-b from-teal-400 to-emerald-600 bg-clip-text text-transparent blur-[2px]">H</span>
                                 </div>
-                                {/* Fade Overlay for Reflection */}
-                                <div className="absolute top-full left-0 w-full h-20 bg-gradient-to-b from-transparent to-background -translate-y-full" />
                             </div>
                         </div>
 
