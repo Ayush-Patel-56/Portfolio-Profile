@@ -25,14 +25,12 @@ export default function Hero() {
     useEffect(() => {
         async function fetchVisitorCount() {
             try {
-                // Increment counter on each page load
-                // Using api.counterapi.dev as countapi.xyz is defunct
-                const response = await fetch('https://api.counterapi.dev/v1/ayush-patel-portfolio/visits/up');
+                // Increment counter on each page load via internal API
+                const response = await fetch('/api/visit');
                 const data = await response.json();
                 setVisitorCount(data.count || 0);
             } catch (error) {
-                // Silently fail if blocked by ad-blocker or network error
-                console.warn('Visitor counter blocked/failed. Defaulting to 0.');
+                console.error('Error fetching visitor count:', error);
                 setVisitorCount(0);
             }
         }
