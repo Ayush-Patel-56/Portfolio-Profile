@@ -86,15 +86,18 @@ export default function Hero() {
                                 />
 
 
-                                {/* Signature Overlay */}
-                                <div className="absolute bottom-6 left-6 z-10">
+                                {/* Signature Overlay - Diagonal positioning */}
+                                <div className="absolute -bottom-10 left-0 right-0 z-10 flex justify-start -ml-24">
                                     <Image
                                         src="/signature.png"
                                         alt="Ayush Signature"
-                                        width={500}
-                                        height={350}
+                                        width={700}
+                                        height={450}
                                         className="opacity-90 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]"
-                                        style={{ filter: 'brightness(0) invert(1)' }}
+                                        style={{
+                                            filter: 'brightness(0) invert(1)',
+                                            transform: 'rotate(-8deg)'
+                                        }}
                                     />
                                 </div>
                             </div>
