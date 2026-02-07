@@ -16,8 +16,11 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Rohan Sen - Portfolio",
-  description: "Portfolio of Rohan Sen, Software Developer",
+  title: "Ayush Patel - Portfolio",
+  description: "Portfolio of Ayush Patel, Software Developer",
+  icons: {
+    icon: "/bear-logo.png",
+  },
 };
 
 export default function RootLayout({

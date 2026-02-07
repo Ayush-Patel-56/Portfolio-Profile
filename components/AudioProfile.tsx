@@ -49,8 +49,8 @@ export default function AudioProfile() {
             {/* Dynamic Background Glow */}
             <div
                 className={`absolute -inset-10 blur-3xl rounded-full -z-10 transition-all duration-1000 ${isPlaying
-                        ? "bg-gradient-to-r from-red-500/20 via-purple-500/20 to-orange-500/20 opacity-100 scale-110"
-                        : "bg-gradient-to-r from-blue-600/10 to-cyan-400/10 opacity-70 scale-100"
+                    ? "bg-gradient-to-r from-red-500/20 via-purple-500/20 to-orange-500/20 opacity-100 scale-110"
+                    : "bg-gradient-to-r from-blue-600/10 to-cyan-400/10 opacity-70 scale-100"
                     }`}
             />
 
@@ -63,7 +63,7 @@ export default function AudioProfile() {
                 {/* Left Side - Image */}
                 <div className="relative w-32 h-auto bg-black/40 border-r border-cyan-500/20">
                     <Image
-                        src="/Bear logo.png"
+                        src="/bear-logo.png"
                         alt="AI Avatar"
                         fill
                         className="object-cover opacity-90 group-hover/card:scale-105 transition-transform duration-500"
