@@ -73,7 +73,7 @@ export default function Hero() {
                         style={{ transformStyle: "preserve-3d", perspective: 1000 }}
                         className="relative lg:w-1/2 flex justify-center"
                     >
-                        <div className="relative w-80 h-96 lg:w-[500px] lg:h-[700px] grayscale hover:grayscale-0 transition-all duration-500 group -ml-8 -mt-12">
+                        <div className="relative w-80 h-96 lg:w-[500px] lg:h-[700px] grayscale-0 hover:grayscale transition-all duration-500 group -ml-8 -mt-12">
                             {/* Organic Glow on Hover - follows subject contour */}
                             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 blur-3xl group-hover:blur-[60px] transition-all duration-500 -z-10 scale-90" />
 
@@ -151,16 +151,22 @@ export default function Hero() {
             </div>
 
             {/* Total Visits Pill */}
+            {/* Total Visits Pill with Animated Gradient Border */}
             <motion.div
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
-                className="absolute top-8 left-1/2 -translate-x-1/2 glass px-6 py-2 rounded-full text-sm font-light border-primary/20"
+                className="absolute top-8 left-1/2 -translate-x-1/2 rounded-full p-[1px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent bg-[length:200%_100%] animate-[shimmer_3s_infinite_linear] overflow-hidden"
             >
-                <span className="text-white/50">Total Visits</span>
-                <span className="ml-2 font-bold text-white">
-                    <AnimatedCounter value={visitorCount} />
-                </span>
-                <div className="absolute -bottom-px left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+                <div className="relative bg-[#0a0a0a]/90 backdrop-blur-md px-6 py-2 rounded-full flex items-center gap-2 border border-white/5">
+                    <span className="text-white/50 text-sm font-light">Total Visits</span>
+                    <div className="w-px h-4 bg-white/10" />
+                    <span className="font-bold text-white text-sm tabular-nums tracking-wide">
+                        <AnimatedCounter value={visitorCount} />
+                    </span>
+
+                    {/* Inner sheen effect */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
+                </div>
             </motion.div>
         </section>
     );
