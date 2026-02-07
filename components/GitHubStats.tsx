@@ -44,7 +44,9 @@ export default function GitHubStats() {
                 const reposData = await reposResponse.json();
 
                 // Calculate total stars
-                const totalStars = reposData.reduce((acc: number, repo: any) => acc + repo.stargazers_count, 0);
+                const totalStars = Array.isArray(reposData)
+                    ? reposData.reduce((acc: number, repo: any) => acc + repo.stargazers_count, 0)
+                    : 0;
 
                 // Fetch PRs (search API for pull requests created by user)
                 const prsResponse = await fetch(`https://api.github.com/search/issues?q=author:${username}+type:pr`);
