@@ -4,6 +4,8 @@ import { motion, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import CodeCard from "./CodeCard";
+import TypingAnimation from "./TypingAnimation";
+import AnimatedStats from "./AnimatedStats";
 import { useEffect, useState } from "react";
 
 function AnimatedCounter({ value }: { value: number }) {
@@ -118,6 +120,19 @@ export default function Hero() {
                                 <span className="animated-gradient-text">Hi, I am Ayush Patel</span>
                             </h1>
 
+                            {/* Typing Animation */}
+                            <div className="text-xl lg:text-2xl text-white/70 mt-4">
+                                <TypingAnimation
+                                    texts={[
+                                        "Software Developer",
+                                        "Open Source Enthusiast",
+                                        "Frontend Developer",
+                                        "UI/UX Designer",
+                                        "Full-Stack Developer"
+                                    ]}
+                                />
+                            </div>
+
                             <a
                                 href="mailto:ayushpatel2731@gmail.com"
                                 className="inline-flex items-center gap-2 text-blue-400 mt-4 hover:text-blue-300 transition-colors text-lg group"
@@ -128,6 +143,9 @@ export default function Hero() {
                         </motion.div>
 
                         <CodeCard />
+
+                        {/* Animated Stats */}
+                        <AnimatedStats />
                     </div>
                 </div>
             </div>

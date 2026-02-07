@@ -9,6 +9,8 @@ import Sidebar from "@/components/Sidebar";
 import SocialLinks from "@/components/SocialLinks";
 import BackgroundEffects from "@/components/BackgroundEffects";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -17,17 +19,20 @@ export default function Home() {
       <Sidebar />
       <SocialLinks />
 
-      <div className="pl-20 pr-20 relative z-20"> {/* Add padding to account for fixed sidebars */}
-        <Hero />
-        <About />
-        <Skills />
-        <OpenSource />
-        <Projects />
-        <CodingProfiles />
-        <GitHubStats />
-      </div>
+      <PageTransition>
+        <div className="pl-20 pr-20 relative z-20"> {/* Add padding to account for fixed sidebars */}
+          <Hero />
+          <About />
+          <Skills />
+          <OpenSource />
+          <Projects />
+          <CodingProfiles />
+          <GitHubStats />
+        </div>
 
-      <Footer />
+        <Footer />
+        <ScrollToTop />
+      </PageTransition>
 
       {/* Background radial gradient spotlight following mouse could be added here */}
     </main>
