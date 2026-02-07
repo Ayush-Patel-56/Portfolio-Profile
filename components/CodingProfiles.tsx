@@ -20,7 +20,7 @@ const profiles: Profile[] = [
     {
         name: "LeetCode",
         icon: "/logos/leetcode.png",
-        url: "https://leetcode.com/u/Ayush-Patel-56/",
+        url: "https://leetcode.com/u/mdBDSIh46b/",
         color: "from-orange-500/20 to-yellow-500/20",
         textColor: "text-orange-400",
         bg: "bg-[#1a1a1a]"
@@ -28,7 +28,7 @@ const profiles: Profile[] = [
     {
         name: "CodeChef",
         icon: "/logos/codechef.png",
-        url: "https://www.codechef.com/users/ayush_patel_56",
+        url: "https://www.codechef.com/users/ayushrpp25",
         color: "from-amber-600/20 to-orange-400/20",
         textColor: "text-amber-400",
         bg: "bg-white"
@@ -36,7 +36,7 @@ const profiles: Profile[] = [
     {
         name: "GeeksforGeeks",
         icon: "/logos/geeksforgeeks.jpg",
-        url: "https://www.geeksforgeeks.org/user/ayushpatel56/",
+        url: "https://www.geeksforgeeks.org/profile/ayushrrsef?tab=activity",
         color: "from-green-500/20 to-emerald-500/20",
         textColor: "text-green-400",
         bg: "bg-white"
@@ -44,7 +44,7 @@ const profiles: Profile[] = [
     {
         name: "InterviewBit",
         icon: "/logos/interviewbit.png",
-        url: "https://www.interviewbit.com/profile/ayush-patel-56",
+        url: "https://www.interviewbit.com/profile/ayush-patel_115/",
         color: "from-blue-500/20 to-cyan-500/20",
         textColor: "text-blue-400",
         bg: "bg-white"
@@ -52,7 +52,7 @@ const profiles: Profile[] = [
     {
         name: "HackerRank",
         icon: "/logos/hackerrank.png",
-        url: "https://www.hackerrank.com/profile/ayushpatel56",
+        url: "https://www.hackerrank.com/profile/ayushpatel2731",
         color: "from-green-600/20 to-lime-500/20",
         textColor: "text-green-500",
         bg: "bg-[#0a0a0a]"
@@ -60,7 +60,7 @@ const profiles: Profile[] = [
     {
         name: "Codolio",
         icon: "/logos/codolio.png",
-        url: "https://codolio.com/profile/ayush-patel-56",
+        url: "https://codolio.com/profile/Ayush-Patel-56",
         color: "from-purple-500/20 to-pink-500/20",
         textColor: "text-purple-400",
         bg: "bg-white"
