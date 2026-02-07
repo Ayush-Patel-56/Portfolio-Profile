@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import AudioProfile from "./AudioProfile";
 
 export default function About() {
     return (
@@ -18,35 +19,7 @@ export default function About() {
                         {/* Left Column - Visuals */}
                         <div className="flex flex-col items-center gap-8">
                             {/* AI Card */}
-                            <div className="w-full max-w-sm bg-[#0a192f] rounded-xl overflow-hidden border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.5)] relative group">
-                                {/* Glow effect behind */}
-                                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-green-500 opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500" />
-
-                                <div className="relative p-4 flex gap-4 bg-[#0a192f]/90 backdrop-blur z-10">
-                                    <div className="w-20 h-20 bg-gray-800 rounded-lg shrink-0 overflow-hidden relative">
-                                        {/* Placeholder image resembling the hooded figure */}
-                                        <div className="absolute inset-0 bg-gradient-to-b from-gray-700 to-black flex items-center justify-center">
-                                            <span className="text-3xl filter grayscale">👤</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex-1 space-y-2">
-                                        <div>
-                                            <h3 className="font-bold text-white leading-none">About me</h3>
-                                            <p className="text-[10px] text-white/50 uppercase tracking-widest mt-1">by AI</p>
-                                        </div>
-                                        <div className="flex gap-2">
-                                            <span className="px-2 py-0.5 rounded-full bg-white/10 text-[10px] text-white/80 border border-white/10 shadow-inner">focused</span>
-                                            <span className="px-2 py-0.5 rounded-full bg-white/10 text-[10px] text-white/80 border border-white/10 shadow-inner">evolving</span>
-                                        </div>
-                                        <button className="flex items-center gap-2 text-[10px] text-white/60 hover:text-white transition-colors group/btn">
-                                            <div className="p-1 rounded-full border border-white/30 group-hover/btn:border-white group-hover/btn:bg-white/10 transition-colors">
-                                                <Play className="w-2 h-2 fill-current" />
-                                            </div>
-                                            Listen all about me!
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                            <AudioProfile />
 
                             {/* AYUSH Typography (Matches ROHAN style) */}
                             <div className="relative select-none pointer-events-none">
