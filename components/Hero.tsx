@@ -26,12 +26,13 @@ export default function Hero() {
         async function fetchVisitorCount() {
             try {
                 // Increment counter on each page load
-                const response = await fetch('https://api.countapi.xyz/hit/ayush-patel-portfolio-hero/visits');
+                // Using api.counterapi.dev as countapi.xyz is defunct
+                const response = await fetch('https://api.counterapi.dev/v1/ayush-patel-portfolio/visits/up');
                 const data = await response.json();
-                setVisitorCount(data.value || 0);
+                setVisitorCount(data.count || 0);
             } catch (error) {
                 // Silently fail if blocked by ad-blocker or network error
-                console.warn('Visitor counter blocked/failed (likely ad-blocker). Defaulting to 0.');
+                console.warn('Visitor counter blocked/failed. Defaulting to 0.');
                 setVisitorCount(0);
             }
         }
