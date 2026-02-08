@@ -51,6 +51,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/bear-logo.png",
   },
+  verification: {
+    google: "00O476Gj35vrO5Mv2HX6NqN4O-KH6PF__No3G7GNuog",
+  },
   alternates: {
     canonical: "https://ayushpatel-coral.vercel.app",
   },
