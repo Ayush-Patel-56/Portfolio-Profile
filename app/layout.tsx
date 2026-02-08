@@ -51,6 +51,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/bear-logo.png",
   },
+  alternates: {
+    canonical: "https://ayushpatel-coral.vercel.app",
+  },
 };
 
 export default function RootLayout({
@@ -58,11 +61,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ayush Patel",
+    "url": "https://ayushpatel-coral.vercel.app",
+    "image": "https://ayushpatel-coral.vercel.app/ayush-photo.png",
+    "sameAs": [
+      "https://github.com/Ayush-Patel-56",
+      "https://www.linkedin.com/in/ayush-patel-15429b359",
+      "https://x.com/AyushPatel19592"
+    ],
+    "jobTitle": "Software Developer",
+    "description": "Full-Stack Software Developer specializing in Next.js, React, and Android development."
+  };
+
   return (
     <html lang="en">
       <body
         className={`${inter.variable} ${firaCode.variable} antialiased bg-background text-foreground`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <InteractiveBackground />
         {children}
       </body>
