@@ -14,17 +14,17 @@ export default function About() {
                     viewport={{ once: true }}
                     className="max-w-6xl mx-auto"
                 >
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
                         {/* Left Column - Visuals */}
-                        <div className="flex flex-col items-center gap-8">
+                        <div className="flex flex-col items-center gap-8 w-full">
                             {/* AI Card */}
                             <AudioProfile />
 
                             {/* AYUSH Typography with Mirror Effect */}
-                            <div className="relative select-none pointer-events-none mt-8">
+                            <div className="relative select-none pointer-events-none mt-8 flex flex-col items-center">
                                 {/* Main Text */}
-                                <h2 className="text-8xl md:text-9xl font-black tracking-tight flex gap-2 z-10 relative">
+                                <h2 className="text-5xl md:text-8xl lg:text-9xl font-black tracking-tight flex gap-2 z-10 relative">
                                     <span className="bg-gradient-to-b from-orange-400 to-amber-600 bg-clip-text text-transparent">A</span>
                                     <span className="bg-gradient-to-b from-blue-400 to-indigo-600 bg-clip-text text-transparent">Y</span>
                                     <span className="bg-gradient-to-b from-pink-500 to-rose-600 bg-clip-text text-transparent">U</span>
@@ -34,7 +34,7 @@ export default function About() {
 
                                 {/* Reflection */}
                                 <div
-                                    className="absolute left-0 right-0 top-[70%] md:top-[80%] flex gap-2 -z-10 opacity-50 select-none pointer-events-none"
+                                    className="absolute left-0 right-0 top-[60%] md:top-[75%] lg:top-[80%] flex justify-center gap-2 -z-10 opacity-50 select-none pointer-events-none"
                                     style={{
                                         transform: 'scaleY(-1)',
                                         maskImage: 'linear-gradient(to bottom, transparent, black)',
@@ -52,7 +52,7 @@ export default function About() {
                         </div>
 
                         {/* Right Column - Content */}
-                        <div className="space-y-8 relative pl-0 lg:pl-10">
+                        <div className="space-y-6 lg:space-y-8 relative pl-0 lg:pl-10 text-center lg:text-left">
                             {/* Vertical Line decoration */}
                             <div className="absolute left-0 top-0 bottom-0 w-1 bg-white/10 hidden lg:block rounded-full" />
 

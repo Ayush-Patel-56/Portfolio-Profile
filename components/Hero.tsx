@@ -56,7 +56,7 @@ export default function Hero() {
             <div className="absolute bottom-0 left-0 w-1/2 h-full bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
 
                     {/* Left Side - Image */}
                     <motion.div
@@ -70,9 +70,9 @@ export default function Hero() {
                             transition: { duration: 0.4, type: "spring", stiffness: 200 }
                         }}
                         style={{ transformStyle: "preserve-3d", perspective: 1000 }}
-                        className="relative lg:w-1/2 flex justify-center"
+                        className="relative w-full flex justify-center lg:w-1/2"
                     >
-                        <div className="relative w-80 h-96 lg:w-[500px] lg:h-[700px] grayscale-0 hover:grayscale transition-all duration-500 group -ml-8 -mt-12">
+                        <div className="relative w-full max-w-[320px] lg:max-w-[500px] aspect-[3/4] grayscale-0 hover:grayscale transition-all duration-500 group lg:-ml-8 lg:-mt-12">
                             {/* Organic Glow on Hover - follows subject contour */}
                             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 blur-3xl group-hover:blur-[60px] transition-all duration-500 -z-10 scale-90" />
 
@@ -84,17 +84,18 @@ export default function Hero() {
                                     fill
                                     className="object-contain"
                                     priority
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
 
 
                                 {/* Signature Overlay - Diagonal positioning */}
-                                <div className="absolute -bottom-10 left-0 right-0 z-10 flex justify-start -ml-24">
+                                <div className="absolute -bottom-6 lg:-bottom-10 left-0 right-0 z-10 flex justify-center lg:justify-start lg:-ml-24">
                                     <Image
                                         src="/signature.png"
                                         alt="Ayush Signature"
                                         width={700}
                                         height={450}
-                                        className="opacity-90 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]"
+                                        className="opacity-90 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)] w-[200px] lg:w-[700px] h-auto"
                                         style={{
                                             filter: 'brightness(0) invert(1)',
                                             transform: 'rotate(-8deg)'
@@ -105,22 +106,22 @@ export default function Hero() {
                         </div>
 
                         {/* Horizontal Green/Teal Line Below Photo - Not affected by hover */}
-                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-teal-500 to-transparent -ml-8" />
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-teal-500 to-transparent lg:-ml-8" />
                     </motion.div>
 
                     {/* Right Side - Content */}
-                    <div className="lg:w-1/2 space-y-8">
+                    <div className="lg:w-1/2 space-y-6 lg:space-y-8 text-center lg:text-left">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
-                            <h1 className="text-5xl lg:text-7xl font-bold tracking-tight">
+                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight">
                                 <span className="animated-gradient-text">Hi, I am Ayush Patel</span>
                             </h1>
 
                             {/* Typing Animation */}
-                            <div className="text-xl lg:text-2xl text-white/70 mt-4">
+                            <div className="text-lg lg:text-2xl text-white/70 mt-4 h-[30px] lg:h-auto">
                                 <TypingAnimation
                                     texts={[
                                         "Software Developer",
@@ -134,10 +135,10 @@ export default function Hero() {
 
                             <a
                                 href="mailto:ayushpatel2731@gmail.com"
-                                className="inline-flex items-center gap-2 text-blue-400 mt-4 hover:text-blue-300 transition-colors text-lg group"
+                                className="inline-flex items-center gap-2 text-blue-400 mt-4 hover:text-blue-300 transition-colors text-base lg:text-lg group"
                             >
                                 ayushpatel2731@gmail.com
-                                <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </a>
                         </motion.div>
 
@@ -154,12 +155,12 @@ export default function Hero() {
             <motion.div
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
-                className="absolute top-8 left-1/2 -translate-x-1/2 rounded-full p-[1px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent bg-[length:200%_100%] animate-[shimmer_3s_infinite_linear] overflow-hidden"
+                className="absolute top-24 lg:top-8 left-1/2 -translate-x-1/2 rounded-full p-[1px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent bg-[length:200%_100%] animate-[shimmer_3s_infinite_linear] overflow-hidden z-20"
             >
-                <div className="relative bg-[#0a0a0a]/90 backdrop-blur-md px-6 py-2 rounded-full flex items-center gap-2 border border-white/5">
-                    <span className="text-white/50 text-sm font-light">Total Visits</span>
-                    <div className="w-px h-4 bg-white/10" />
-                    <span className="font-bold text-white text-sm tabular-nums tracking-wide">
+                <div className="relative bg-[#0a0a0a]/90 backdrop-blur-md px-4 lg:px-6 py-1.5 lg:py-2 rounded-full flex items-center gap-2 border border-white/5">
+                    <span className="text-white/50 text-xs lg:text-sm font-light">Total Visits</span>
+                    <div className="w-px h-3 lg:h-4 bg-white/10" />
+                    <span className="font-bold text-white text-xs lg:text-sm tabular-nums tracking-wide">
                         <AnimatedCounter value={visitorCount} />
                     </span>
 

@@ -11,7 +11,7 @@ const socialLinks = [
 
 export default function SocialLinks() {
     return (
-        <div className="fixed right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-6">
+        <div className="hidden lg:flex fixed right-8 top-1/2 -translate-y-1/2 z-50 flex-col gap-6">
             <div className="h-24 w-px bg-gradient-to-b from-transparent to-white/20 mx-auto" />
             {socialLinks.map((item, index) => (
                 <Link

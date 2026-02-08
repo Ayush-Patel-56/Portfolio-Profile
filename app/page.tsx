@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import CodingProfiles from "@/components/CodingProfiles";
 import GitHubStats from "@/components/GitHubStats";
 import Sidebar from "@/components/Sidebar";
+import MobileNavbar from "@/components/MobileNavbar";
 import SocialLinks from "@/components/SocialLinks";
 import BackgroundEffects from "@/components/BackgroundEffects";
 import Footer from "@/components/Footer";
@@ -17,10 +18,11 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground relative selection:bg-primary/30">
       <BackgroundEffects />
       <Sidebar />
+      <MobileNavbar />
       <SocialLinks />
 
       <PageTransition>
-        <div className="pl-20 pr-20 relative z-20"> {/* Add padding to account for fixed sidebars */}
+        <div className="px-4 lg:pl-20 lg:pr-20 relative z-20"> {/* Add padding to account for fixed sidebars */}
           <Hero />
           <About />
           <Skills />

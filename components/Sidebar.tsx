@@ -12,7 +12,7 @@ const navItems = [
 
 export default function Sidebar() {
     return (
-        <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4 bg-secondary/80 backdrop-blur-md p-3 rounded-2xl border border-white/10 shadow-xl">
+        <div className="hidden lg:flex fixed left-4 top-1/2 -translate-y-1/2 z-50 flex-col gap-4 bg-secondary/80 backdrop-blur-md p-3 rounded-2xl border border-white/10 shadow-xl">
             {navItems.map((item, index) => (
                 <Link
                     key={index}

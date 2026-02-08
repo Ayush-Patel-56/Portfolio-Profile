@@ -47,7 +47,7 @@ export default function AnimatedStats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-8 p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 p-4 lg:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm"
         >
             <StatItem value={15} label="Projects Completed" suffix="+" />
             <StatItem value={500} label="GitHub Contributions" suffix="+" />
