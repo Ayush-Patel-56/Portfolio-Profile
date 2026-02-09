@@ -161,14 +161,14 @@ export default function OpenSource() {
                                 btn: "text-blue-200 hover:text-white"
                             },
                             white: {
-                                card: "bg-white/90 backdrop-blur-md border-slate-300",
-                                overlay: "from-white/90 via-white/40",
-                                title: "text-slate-900",
-                                desc: "text-slate-600",
-                                tag: "bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200",
-                                icon: "text-slate-500",
-                                point: "text-slate-700",
-                                btn: "text-slate-500 hover:text-slate-900"
+                                card: "bg-slate-950/40 backdrop-blur-md border-slate-500/20",
+                                overlay: "from-slate-950/80 via-slate-950/20",
+                                title: "text-white",
+                                desc: "text-slate-300/70",
+                                tag: "bg-slate-500/10 border-slate-400/20 text-slate-100 hover:bg-slate-500/20",
+                                icon: "text-slate-400",
+                                point: "text-slate-300",
+                                btn: "text-slate-300 hover:text-white"
                             },
                             black: {
                                 card: "bg-black/40 backdrop-blur-md border-white/10",
@@ -231,14 +231,14 @@ export default function OpenSource() {
                                 btn: "text-blue-400 hover:text-red-400"
                             },
                             whiteOrange: {
-                                card: "bg-white/90 backdrop-blur-md border-orange-200",
-                                overlay: "from-white/95 via-white/40",
-                                title: "text-slate-900",
-                                desc: "text-slate-600",
-                                tag: "bg-orange-50 border-orange-200 text-orange-700 hover:bg-orange-100",
-                                icon: "text-orange-500",
-                                point: "text-slate-700",
-                                btn: "text-orange-600 hover:text-orange-900"
+                                card: "bg-[#1c1917]/40 backdrop-blur-md border-orange-500/20",
+                                overlay: "from-[#1c1917]/80 via-[#1c1917]/20",
+                                title: "text-white",
+                                desc: "text-orange-100/70",
+                                tag: "bg-orange-500/10 border-orange-400/20 text-orange-100 hover:bg-orange-500/20",
+                                icon: "text-orange-400",
+                                point: "text-orange-100/80",
+                                btn: "text-orange-300 hover:text-white"
                             }
                         }[exp.color] || { // Default fallback
                             card: "bg-black/40 backdrop-blur-md border-white/10",
@@ -271,8 +271,7 @@ export default function OpenSource() {
                                     <div className={`absolute inset-0 bg-gradient-to-t to-transparent ${styles.overlay}`} />
 
                                     {/* Date Pill - Adaptive color */}
-                                    <div className={`absolute top-4 right-4 backdrop-blur-md border px-3 py-1.5 rounded-lg text-xs flex items-center gap-2 z-10 font-medium
-                                        ${exp.color === 'white' ? 'bg-white/80 border-slate-200 text-slate-800' : 'bg-black/60 border-white/10 text-white/90'}`}>
+                                    <div className={`absolute top-4 right-4 backdrop-blur-md border px-3 py-1.5 rounded-lg text-xs flex items-center gap-2 z-10 font-medium bg-black/60 border-white/10 text-white/90`}>
                                         <Calendar className="w-3 h-3" />
                                         {exp.period}
                                     </div>
