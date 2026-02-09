@@ -20,7 +20,7 @@ const experiences: Experience[] = [
     {
         title: "AnkiDroid",
         role: "Contributor - Anki-Android",
-        period: "Open Source",
+        period: "GSOC 2026",
         description: "AnkiDroid is an advanced flashcard app on Android which lets you learn flashcards very efficiently.",
         tags: ["Android", "Kotlin", "Java", "Education", "Mobile"],
         points: [
@@ -36,7 +36,7 @@ const experiences: Experience[] = [
     {
         title: "CNCF",
         role: "Contributor - CNCF Landscape",
-        period: "Open Source",
+        period: "GSOC 2026",
         description: "The CNCF Cloud Native Landscape creates a resource for understanding the cloud native ecosystem.",
         tags: ["Cloud Native", "YAML", "Automation", "Go", "CNCF"],
         points: [
@@ -52,7 +52,7 @@ const experiences: Experience[] = [
     {
         title: "Catrobat",
         role: "Contributor - Paintroid",
-        period: "Open Source",
+        period: "GSOC 2026",
         description: "Paintroid is a free and open-source image editor for Android that allows creating drawings and editing photos.",
         tags: ["Android", "Kotlin", "Graphics", "Image Processing", "UI/UX"],
         points: [
@@ -68,7 +68,7 @@ const experiences: Experience[] = [
     {
         title: "Rocket.Chat",
         role: "Contributor - Rocket.Chat",
-        period: "Open Source",
+        period: "GSOC 2026",
         description: "Rocket.Chat is the world's largest open source communications platform.",
         tags: ["TypeScript", "React", "Meteor", "Real-time", "Chat"],
         points: [
@@ -80,6 +80,54 @@ const experiences: Experience[] = [
         image: "/rocketchat.jpeg",
         credentialsLink: "https://github.com/RocketChat/Rocket.Chat",
         color: "red"
+    },
+    {
+        title: "Kyverno",
+        role: "Contributor - Kyverno",
+        period: "LFX Mentorship",
+        description: "Kyverno is a policy engine designed for Kubernetes. It allows cluster administrators to manage policy as Kubernetes resources.",
+        tags: ["Kubernetes", "Policy", "Security", "Go", "Cloud Native"],
+        points: [
+            "Participating in the LFX Mentorship program to enhance Kyverno's policy management",
+            "Developing and optimizing Kubernetes native policy definitions",
+            "Improving security and compliance automation within cloud-native ecosystems",
+            "Contributing to core feature enhancements and technical documentation"
+        ],
+        image: "/kyverno.png",
+        credentialsLink: "https://github.com/kyverno/kyverno",
+        color: "whiteOrange"
+    },
+    {
+        title: "Krkn-AI",
+        role: "Contributor - Krkn-AI",
+        period: "LFX Mentorship",
+        description: "An intelligent chaos engineering framework that uses genetic algorithms to optimize chaos scenarios for Kubernetes applications.",
+        tags: ["Chaos Engineering", "AI", "Kubernetes", "Go", "Resilience"],
+        points: [
+            "Implementing genetic algorithms to optimize chaos scenarios for Kubernetes clusters",
+            "Enhancing automation and discovery of system resilience bottlenecks",
+            "Contributing to the intelligent chaos engineering framework development",
+            "Collaborating with maintainers on performance analysis and reporting"
+        ],
+        image: "/krkn.png",
+        credentialsLink: "https://github.com/krkn-chaos/krkn-ai",
+        color: "redBlue"
+    },
+    {
+        title: "Fluid",
+        role: "Contributor - Fluid",
+        period: "LFX Mentorship",
+        description: "Fluid is an open source Kubernetes-native data abstraction and acceleration engine for data-intensive applications.",
+        tags: ["Cloud Native", "Data", "Kubernetes", "Go", "Storage"],
+        points: [
+            "Selected as an LFX Mentee for the Fluid project under the CNCF umbrella",
+            "Contributing to data acceleration and abstraction layers for data-intensive apps",
+            "Optimizing data access patterns and enhancing storage orchestration",
+            "Working on core component performance improvements and bug fixes"
+        ],
+        image: "/fluid.png",
+        credentialsLink: "https://github.com/fluid-cloudnative/fluid",
+        color: "blue"
     }
 ];
 
@@ -141,6 +189,56 @@ export default function OpenSource() {
                                 icon: "text-red-300",
                                 point: "text-red-100/80",
                                 btn: "text-red-200 hover:text-white"
+                            },
+                            green: {
+                                card: "bg-[#064e3b]/30 backdrop-blur-md border-green-500/20",
+                                overlay: "from-[#064e3b]/80 via-[#064e3b]/20",
+                                title: "text-white",
+                                desc: "text-green-100/70",
+                                tag: "bg-green-500/10 border-green-400/20 text-green-100 hover:bg-green-500/20",
+                                icon: "text-green-300",
+                                point: "text-green-100/80",
+                                btn: "text-green-200 hover:text-white"
+                            },
+                            purple: {
+                                card: "bg-[#4c1d95]/30 backdrop-blur-md border-purple-500/20",
+                                overlay: "from-[#4c1d95]/80 via-[#4c1d95]/20",
+                                title: "text-white",
+                                desc: "text-purple-100/70",
+                                tag: "bg-purple-500/10 border-purple-400/20 text-purple-100 hover:bg-purple-500/20",
+                                icon: "text-purple-300",
+                                point: "text-purple-100/80",
+                                btn: "text-purple-200 hover:text-white"
+                            },
+                            cyan: {
+                                card: "bg-[#164e63]/30 backdrop-blur-md border-cyan-500/20",
+                                overlay: "from-[#164e63]/80 via-[#164e63]/20",
+                                title: "text-white",
+                                desc: "text-cyan-100/70",
+                                tag: "bg-cyan-500/10 border-cyan-400/20 text-cyan-100 hover:bg-cyan-500/20",
+                                icon: "text-cyan-300",
+                                point: "text-cyan-100/80",
+                                btn: "text-cyan-200 hover:text-white"
+                            },
+                            redBlue: {
+                                card: "bg-gradient-to-br from-red-950/40 to-blue-950/40 backdrop-blur-md border-white/10",
+                                overlay: "from-red-900/60 to-blue-900/60",
+                                title: "text-white",
+                                desc: "text-zinc-300",
+                                tag: "bg-red-500/10 border-red-500/20 text-red-200 hover:bg-blue-500/20",
+                                icon: "text-blue-400",
+                                point: "text-zinc-300",
+                                btn: "text-blue-400 hover:text-red-400"
+                            },
+                            whiteOrange: {
+                                card: "bg-white/90 backdrop-blur-md border-orange-200",
+                                overlay: "from-white/95 via-white/40",
+                                title: "text-slate-900",
+                                desc: "text-slate-600",
+                                tag: "bg-orange-50 border-orange-200 text-orange-700 hover:bg-orange-100",
+                                icon: "text-orange-500",
+                                point: "text-slate-700",
+                                btn: "text-orange-600 hover:text-orange-900"
                             }
                         }[exp.color] || { // Default fallback
                             card: "bg-black/40 backdrop-blur-md border-white/10",

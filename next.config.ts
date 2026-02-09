@@ -23,6 +23,18 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cdn.simpleicons.org",
       },
+      {
+        protocol: "https",
+        hostname: "kyverno.io",
+      },
+      {
+        protocol: "https",
+        hostname: "fluid-cloudnative.github.io",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+      },
     ],
   },
 };
