@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Fira_Code } from "next/font/google"; // eslint-disable-line @typescript-eslint/no-unused-vars
 import "./globals.css";
 import InteractiveBackground from "@/components/InteractiveBackground";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -90,6 +91,7 @@ export default function RootLayout({
         />
         <InteractiveBackground />
         {children}
+        <Analytics />
       </body>
     </html>
   );
