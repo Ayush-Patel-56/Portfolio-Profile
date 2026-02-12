@@ -2,95 +2,38 @@
 
 export default function InteractiveBackground() {
     return (
-        <div className="fixed inset-0 pointer-events-none z-0">
-            {/* Base rough noise - rock texture */}
+        <div className="fixed inset-0 pointer-events-none z-0 transform-gpu overflow-hidden bg-[#020617]">
+            {/* Ultra-Fast Static Noise PNG (Base64) - 0.1kb */}
             <div
-                className="absolute inset-0 opacity-30"
+                className="absolute inset-0 opacity-[0.03]"
                 style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='roughNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='6' seed='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23roughNoise)'/%3E%3C/svg%3E")`,
-                    mixBlendMode: 'overlay',
+                    backgroundImage: `url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAApb3u1AAAABlBMVEUAAAD///+l2Z/dAAAAb0lEQVR4XmP4y8CAnwEMuPCxwKSDhYEFJhwsmHSwMLDAhIMFkw4WBhaYcLBg0sHCwAITDhZMOlgYWGDCwYJJBwsDC0w4WDDpYGFggQkHCyYdLAwsMOFgwaSDhYEFJhwsmHSwMLDAhIMFkw4WBhaY8AEA490S709I2S8AAAAASUVORK5CYII=")`,
                 }}
             />
 
-            {/* Brushed metal horizontal lines */}
+            {/* Brushed Metal Texture - CSS Only */}
             <div
-                className="absolute inset-0 opacity-20"
+                className="absolute inset-0 opacity-[0.05]"
                 style={{
-                    backgroundImage: `repeating-linear-gradient(
-                        0deg,
-                        rgba(255, 255, 255, 0) 0px,
-                        rgba(255, 255, 255, 0.1) 1px,
-                        rgba(255, 255, 255, 0) 2px,
-                        rgba(255, 255, 255, 0) 4px
-                    )`,
-                    mixBlendMode: 'soft-light',
+                    backgroundImage: 'repeating-linear-gradient(90deg, rgba(255,255,255,0.1) 0px, transparent 1px, transparent 60px)',
                 }}
             />
 
-            {/* Scratches and imperfections */}
-            <div
-                className="absolute inset-0 opacity-15"
-                style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='scratches'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.05' numOctaves='2' seed='5'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 0 0 0 1 0 0 0 0'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23scratches)' fill='white'/%3E%3C/svg%3E")`,
-                    mixBlendMode: 'overlay',
-                }}
-            />
-
-            {/* Coarse grain - matte finish */}
-            <div
-                className="absolute inset-0 opacity-25"
-                style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='coarseGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='4' seed='10'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23coarseGrain)'/%3E%3C/svg%3E")`,
-                    backgroundSize: '150px 150px',
-                }}
-            />
-
-            {/* Metallic gradient highlights */}
+            {/* Simplified Metallic Shine */}
             <div className="absolute inset-0">
-                {/* Top-left metallic shine */}
-                <div
-                    className="absolute top-0 left-0 w-1/2 h-1/2"
-                    style={{
-                        background: 'radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.08) 0%, transparent 50%)',
-                    }}
-                />
-
-                {/* Bottom-right darker area */}
-                <div
-                    className="absolute bottom-0 right-0 w-1/2 h-1/2"
-                    style={{
-                        background: 'radial-gradient(ellipse at bottom right, rgba(0, 0, 0, 0.25) 0%, transparent 50%)',
-                    }}
-                />
-
-                {/* Cyan metallic tint */}
                 <div
                     className="absolute inset-0"
                     style={{
-                        background: 'radial-gradient(circle at 30% 40%, rgba(20, 184, 166, 0.06) 0%, transparent 60%)',
+                        background: 'radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.08) 0%, transparent 70%), radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.05) 0%, transparent 60%)',
                     }}
                 />
             </div>
 
-            {/* Anisotropic reflection lines (metallic effect) */}
-            <div
-                className="absolute inset-0 opacity-10"
-                style={{
-                    backgroundImage: `repeating-linear-gradient(
-                        90deg,
-                        transparent 0px,
-                        rgba(255, 255, 255, 0.2) 1px,
-                        transparent 2px,
-                        transparent 60px
-                    )`,
-                }}
-            />
-
-            {/* Dark vignette for depth */}
+            {/* Subtle Vignette */}
             <div
                 className="absolute inset-0"
                 style={{
-                    background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.5) 100%)',
+                    background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0, 0, 0, 0.4) 100%)',
                 }}
             />
         </div>

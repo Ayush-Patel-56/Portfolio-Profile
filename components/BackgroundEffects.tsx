@@ -31,48 +31,18 @@ export default function BackgroundEffects() {
                 }}
             />
 
-            {/* Ambient Moving Blobs */}
-            <motion.div
-                animate={{
-                    x: [0, 100, 0],
-                    y: [0, -50, 0],
-                    scale: [1, 1.2, 1],
-                }}
-                transition={{
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: "linear"
-                }}
-                className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/30 rounded-full blur-[100px] opacity-40 mix-blend-screen"
-            />
-            <motion.div
-                animate={{
-                    x: [0, -100, 0],
-                    y: [0, 100, 0],
-                    scale: [1, 1.5, 1],
-                }}
-                transition={{
-                    duration: 25,
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: 2
-                }}
-                className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-500/30 rounded-full blur-[120px] opacity-40 mix-blend-screen"
-            />
-
-            <motion.div
-                animate={{
-                    x: [0, 50, -50, 0],
-                    y: [0, 50, 50, 0],
-                }}
-                transition={{
-                    duration: 15,
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: 5
-                }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/20 rounded-full blur-[120px] opacity-40 mix-blend-screen"
-            />
+            <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+                {/* Ambient Moving Blobs - CSS Animated for GPU performance */}
+                <div
+                    className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] opacity-30 mix-blend-screen animate-float-1"
+                />
+                <div
+                    className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[120px] opacity-30 mix-blend-screen animate-float-2"
+                />
+                <div
+                    className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-purple-500/15 rounded-full blur-[120px] opacity-30 mix-blend-screen animate-float-3"
+                />
+            </div>
         </div>
     );
 }

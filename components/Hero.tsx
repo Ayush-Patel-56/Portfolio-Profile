@@ -72,30 +72,32 @@ export default function Hero() {
                         style={{ transformStyle: "preserve-3d", perspective: 1000 }}
                         className="relative w-full flex justify-center lg:w-1/2"
                     >
-                        <div className="relative w-full max-w-[320px] lg:max-w-[500px] aspect-[3/4] grayscale-0 hover:grayscale transition-all duration-500 group lg:-ml-8 lg:-mt-12">
+                        <div className="relative w-full max-w-[320px] lg:max-w-[500px] aspect-[3/4] transition-[filter] duration-500 group lg:-ml-8 lg:-mt-12">
                             {/* Organic Glow on Hover - follows subject contour */}
                             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 blur-3xl group-hover:blur-[60px] transition-all duration-500 -z-10 scale-90" />
 
                             {/* Image Container - No border, no rounded corners */}
-                            <div className="w-full h-full relative transition-all duration-500 group-hover:drop-shadow-[0_0_40px_rgba(20,184,166,0.6)]">
+                            <div className="w-full h-full relative group-hover:drop-shadow-[0_0_40px_rgba(20,184,166,0.3)] transition-all duration-500">
                                 <Image
                                     src="/ayush-photo.png"
                                     alt="Ayush Patel"
                                     fill
                                     className="object-contain"
                                     priority
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    fetchPriority="high"
+                                    loading="eager"
+                                    sizes="(max-width: 768px) 320px, 500px"
                                 />
 
 
-                                {/* Signature Overlay - Diagonal positioning */}
-                                <div className="absolute -bottom-6 lg:-bottom-10 left-0 right-0 z-10 flex justify-center lg:justify-start lg:-ml-24">
+                                {/* Signature Overlay - Performance Optimized */}
+                                <div className="absolute -bottom-6 lg:-bottom-10 left-0 right-0 z-10 flex justify-center lg:justify-start lg:-ml-24 pointer-events-none">
                                     <Image
                                         src="/signature.png"
                                         alt="Ayush Signature"
-                                        width={700}
-                                        height={450}
-                                        className="opacity-90 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)] w-[200px] lg:w-[700px] h-auto"
+                                        width={500}
+                                        height={320}
+                                        className="opacity-90 w-[180px] lg:w-[500px] h-auto pointer-events-none"
                                         style={{
                                             filter: 'brightness(0) invert(1)',
                                             transform: 'rotate(-8deg)'
